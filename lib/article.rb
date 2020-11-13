@@ -5,7 +5,7 @@ class Article
 
     @@all = []
 
-    def initialize(title,author,description,content)
+    def initialize(title,author,url,content)
         @title = title
         @author = author
         @url = url
@@ -41,8 +41,9 @@ class Article
         index = input.to_i - 1
         
         if index == 0 
-            binding.pry
-            system("start #{article.url}")  
+        
+            #binding.pry
+            Launchy.open("#{article.url}")  
          end 
     
         

@@ -4,6 +4,7 @@ require 'pry'
 require 'httparty'
 require 'json'
 require 'colorize'
+require 'launchy'
 #*Require necessary files
 
 require_relative './lib/api.rb'
