@@ -11,7 +11,8 @@ class Cli
         ░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░
         ░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░
         ░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗
-        ░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝"
+        ░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝\r\n".cyan
+
         puts "Please select one of the following topics:".bold
         self.display_topics
         index = self.initial_input
@@ -20,8 +21,9 @@ class Cli
         api.create_articles
         Article.display_articles
 
-        index= self.secondary_input
+        index = self.secondary_input
         Article.display_article(index) 
+        Article.view_article_in_browser?
         self.another_article?
         #binding.pry
     end 

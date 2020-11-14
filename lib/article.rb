@@ -32,7 +32,9 @@ class Article
         puts "#{article.title}".bold.green + "--" + "#{article.author}".blue.bold
         puts "#{article.content}".light_cyan
 
-        
+    end 
+
+    def self.view_article_in_browser?
         puts "Would you like to view the full article in the browser?".bold
         puts "1.".bold + "Yes".bold.green
         puts "2.".bold + "No".bold.light_red
@@ -43,7 +45,10 @@ class Article
         if index == 0 
         
             #binding.pry
-            Launchy.open("#{article.url}")  
+            Launchy.open("#{self.all[index].url}")  
+        else 
+            puts "Please select 1 or 2".red
+            self.view_article_in_browser?
          end 
     
         
